@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", serif;
+    color: var(--white-color);
+
+}
+:root{
+    --black-color-bg: #000000;
+    --gray-color-br: #0f375b;
+    --white-color:#ffffff;
+}
+::-webkit-scrollbar{
+    width: 12px; 
+    height: 12px;  
+    background-color: #000000;
+}
+body {
+    background-image: linear-gradient(270deg, var(--black-color-bg), var(--gray-color-br));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-here{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color:  var(--gray-color-br);
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 100vw;
+    width: 85vw; 
+    max-height: 100vh;
+    height: 50px;
+     
+}
+.nav-here > .list{
+    display: flex;
+    justify-content: space-around; 
+    max-width: 100vw;
+    width: 85vw;
+    list-style: none;
+}
+.nav-here > .list > li > a{
+    text-decoration: none;
+    color: var(--white-color);
+    transition: all 0.1s ease-in-out;
+}
+.nav-here > .list > li > a:hover{
+    color: #555555;
+}
+
+.main-here{
+    margin-top: 100px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-here > p{
+    margin: 50px;
+    padding: 50px;
+    width: 87vw;
+    font-size: 20px;
+}
+.main-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 87vw;
+    height: 70vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-image: linear-gradient(var(--gray-color-br), var(--black-color-bg));
+}
+.main-section > .image{
+    background-color: var(--gray-color-br);
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.main-section > .image > img{
+    height: 180px;
+    width: 200px;
+}
+.main-section > .text{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    width: 500px;
+}
+.main-section > .text > p{
+    font-size: 20px;
+    line-height: 1.5;
+    
+}
+footer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color-bg);
+    color: var(--white-color);
+}
+/* Responsividade para dispositivos pequenos */
+@media (max-width: 768px) {
+    .nav-here {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .nav-here > .list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    .nav-here > .list > li > a {
+        font-size: 14px;
+    }
+    .main-section {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .main-section > .image,
+    .main-section > .text {
+        width: 90%;
+        height: auto;
+    }
+    .main-section > .text > p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .main-here > p {
+        font-size: 18px;
+        padding: 20px;
+    }
+}
+
+/* Responsividade para dispositivos muito pequenos */
+@media (max-width: 480px) {
+    .nav-here {
+        padding: 15px;
+    }
+    .nav-here > .list > li > a {
+        font-size: 12px;
+    }
+    .main-section {
+        padding: 15px;
+    }
+    .main-section > .image > img {
+        height: 150px;
+        width: 150px;
+    }
+    .main-section > .text > p {
+        font-size: 14px;
+    }
+    .main-here > p {
+        font-size: 16px;
+        padding: 15px;
+    }
+    footer {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
